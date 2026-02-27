@@ -118,7 +118,7 @@ All assets and code are under the [license](./LICENSE) unless specified otherwis
 If this work is helpful for your research, please consider citing the following BibTeX entry.
 ```
 @article{gao2025charactershot,
-  title={FaceShot: Bring Any Character into Life},
+  title={CharacterShot: Controllable and Consistent 4D Character Animation},
   author={Gao, Junyao and Li, Jiaxing and Liu, Wenran and Zeng, Yanhong and Shen, Fei and Chen, Kai and Sun, Yanan and Zhao, Cairong},
   journal={arXiv preprint arXiv:2508.07409},
   year={2025}

@@ -109,6 +109,9 @@ bash train_4d_finetune.sh
 ```
 Please set `--pose_model_path` in `train_4d_finetune.sh` to the checkpoint from the 2D pretraining stage, or continue training from [Gaojunyao/Character2D](https://huggingface.co/Gaojunyao/Character2D).
 
+## Character4D Dataset
+We construct a large-scale 4D character dataset by filtering high-quality characters from VRoid Hub, collecting a total of 13,115 characters in OBJ format. We then retarget and bind 40 diverse motions (e.g., dancing, singing, and jumping), using skeletons from Mixamo, to these characters. Next, we render all characters from 21 viewpoints in the A-pose and under various motions. Finally, we release the raw and rigged OBJ files, along with the rendered images and pose visualizations, at [this link](https://huggingface.co/datasets/Gaojunyao/Character4D).
+
 ## License and Citation
 All assets and code are under the [license](./LICENSE) unless specified otherwise.
 

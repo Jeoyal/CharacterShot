@@ -1,0 +1,1 @@
+python render.py --model_path "4DGS_MODEL_PATH"  --skip_train --configs ./arguments/dnerf/dnerf_default.py

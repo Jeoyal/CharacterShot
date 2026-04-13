@@ -23,7 +23,7 @@
 - [x] Character4D Dataset.
 - [x] Training Code.
 - [x] Inference Code.
-- [ ] 4D Optimization Code (expected in March).
+- [x] 4D Optimization Code.
 
 ## Get Started
 CharacterShot supports: 1) 2D character animation from a character image and pose video; 2) multi-view videos generation from multi-view images of a character and pose images; 3) 4D optimization from multi-view videos.
@@ -42,8 +42,10 @@ This script has been tested on CUDA version of 12.4.
 conda create -n charactershot python==3.10
 conda activate charactershot
 pip install -r requirements.txt
-pip install git+https://github.com/camenduru/simple-knn
-pip install git+https://github.com/ingra14m/depth-diff-gaussian-rasterization
+cd submodules
+pip install -e ./simple-knn
+pip install -e ./depth-diff-gaussian-rasterization
+cd ..
 ```
 
 ### Downloading Checkpoints
@@ -108,6 +110,24 @@ And start training with:
 bash train_4d_finetune.sh
 ```
 Please set `--pose_model_path` in `train_4d_finetune.sh` to the checkpoint from the 2D pretraining stage, or continue training from [Gaojunyao/Character2D](https://huggingface.co/Gaojunyao/Character2D).
+
+### 4D Optimization
+After generating multi-view videos via inference, first prepare the data, then run optimization:
+```
+cd 4D_optimization
+
+# Step 1: Prepare data — split inference mp4 into per-view frames + copy camera templates
+# Edit prepare_optimization_data.sh to set INFERENCE_VIDEO and MULTIVIEW_VIDEO_FOLDER paths
+bash prepare_optimization_data.sh
+
+# Step 2: Train
+# Edit train.sh to set MULTIVIEW_VIDEO_FOLDER path
+bash train.sh
+
+# Step 3: Render
+# Edit render.sh to set 4DGS_MODEL_PATH to training output path
+bash render.sh
+```
 
 ## Character4D Dataset
 We construct a large-scale 4D character dataset by filtering high-quality characters from VRoid Hub, collecting a total of 13,115 characters in OBJ format. We then retarget and bind 40 diverse motions (e.g., dancing, singing, and jumping), using skeletons from Mixamo, to these characters. Next, we render all characters from 21 viewpoints in the A-pose and under various motions. Finally, we release the raw and rigged OBJ files, along with the rendered images and pose visualizations, at [this link](https://huggingface.co/datasets/Gaojunyao/Character4D).

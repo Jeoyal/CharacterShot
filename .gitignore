@@ -7,4 +7,3 @@
 **/__pycache__/
 **/.ipynb_checkpoints/
 /inference/results/
-/inference/examples/

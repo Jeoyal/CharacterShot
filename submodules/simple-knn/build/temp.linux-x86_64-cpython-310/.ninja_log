@@ -1,0 +1,4 @@
+# ninja log v7
+27	12556	1776083698018827297	/datasets_genie/jiaxing.li/temp/7.22additional/WideRange4D-main/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/simple_knn.o	3cf35b1bd03a9d7e
+18	18302	1776083698018827000	/datasets_genie/jiaxing.li/temp/7.22additional/WideRange4D-main/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/ext.o	d72c673d91e028a
+31	51731	1776083698018827297	/datasets_genie/jiaxing.li/temp/7.22additional/WideRange4D-main/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/spatial.o	d70d3fe5d10c9166

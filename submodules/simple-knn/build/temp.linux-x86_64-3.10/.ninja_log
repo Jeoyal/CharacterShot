@@ -1,0 +1,4 @@
+# ninja log v5
+28	24986	1752481247203173731	/mnt/datasets_3d/jiaxing.li/WideRange4D-main/submodules/simple-knn/build/temp.linux-x86_64-3.10/ext.o	e641396566847e2b
+29	79543	1752481301752802707	/mnt/datasets_3d/jiaxing.li/WideRange4D-main/submodules/simple-knn/build/temp.linux-x86_64-3.10/simple_knn.o	64c6d16763e928b1
+29	164068	1752481386278281055	/mnt/datasets_3d/jiaxing.li/WideRange4D-main/submodules/simple-knn/build/temp.linux-x86_64-3.10/spatial.o	72a1faf6e5b9db3
